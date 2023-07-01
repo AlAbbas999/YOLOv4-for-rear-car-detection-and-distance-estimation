@@ -47,7 +47,7 @@ def object_detector(image):
         cv2.putText(image, label, (box[0], box[1] - 14), FONTS, 0.5, color, 2)
 
         # Getting the data
-        if classid == 0:  # Person class id
+        if classid == 0:  # car class id
             data_list.append([class_names[classid[0]], box[2], (box[0], box[1] - 2)])
         # If you want to include more classes, add more [elif] statements here
     return data_list
